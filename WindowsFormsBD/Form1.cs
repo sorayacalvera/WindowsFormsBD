@@ -136,7 +136,7 @@ VALUES (@fn, @ln, @em, @hd, @jid, @sal)";
             catch (Exception ex)
             {
 
-                labMessage.Text = "Fallo en la 3r inserción!";
+                labMessage.Text = "Fallo en la 3r inserción!!";
             }
         }
     }
