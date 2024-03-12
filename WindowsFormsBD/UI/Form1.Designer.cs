@@ -28,21 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.butOpen = new System.Windows.Forms.Button();
             this.labMessage = new System.Windows.Forms.Label();
-            this.butCerrar = new System.Windows.Forms.Button();
             this.butInsert = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // butOpen
-            // 
-            this.butOpen.Location = new System.Drawing.Point(95, 104);
-            this.butOpen.Name = "butOpen";
-            this.butOpen.Size = new System.Drawing.Size(75, 23);
-            this.butOpen.TabIndex = 0;
-            this.butOpen.Text = "Abrir Cnx";
-            this.butOpen.UseVisualStyleBackColor = true;
-            this.butOpen.Click += new System.EventHandler(this.butOpen_Click);
             // 
             // labMessage
             // 
@@ -51,16 +39,6 @@
             this.labMessage.Name = "labMessage";
             this.labMessage.Size = new System.Drawing.Size(0, 16);
             this.labMessage.TabIndex = 1;
-            // 
-            // butCerrar
-            // 
-            this.butCerrar.Location = new System.Drawing.Point(95, 155);
-            this.butCerrar.Name = "butCerrar";
-            this.butCerrar.Size = new System.Drawing.Size(75, 23);
-            this.butCerrar.TabIndex = 2;
-            this.butCerrar.Text = "Cerrar";
-            this.butCerrar.UseVisualStyleBackColor = true;
-            this.butCerrar.Click += new System.EventHandler(this.butCerrar_Click);
             // 
             // butInsert
             // 
@@ -78,9 +56,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 390);
             this.Controls.Add(this.butInsert);
-            this.Controls.Add(this.butCerrar);
             this.Controls.Add(this.labMessage);
-            this.Controls.Add(this.butOpen);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -89,10 +65,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button butOpen;
         private System.Windows.Forms.Label labMessage;
-        private System.Windows.Forms.Button butCerrar;
         private System.Windows.Forms.Button butInsert;
     }
 }

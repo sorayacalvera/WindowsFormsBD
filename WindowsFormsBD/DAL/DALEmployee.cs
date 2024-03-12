@@ -12,13 +12,16 @@ namespace WindowsFormsBD.DAL
 {
     public class DALEmployee
     {
-        public void Insertar3(Employee employee)
+        BDConexion Cnx = new BDConexion();
+
+        public void Insertar(Employee employee)
         {
-            SqlConnection Conn = null;
             try
             {
+                Cnx.Open();
+
                 SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = Conn;
+                sqlCommand.Connection = Cnx.Conn;
                 sqlCommand.CommandType = CommandType.Text;
                 sqlCommand.CommandText = @"
 INSERT INTO employees(
@@ -34,7 +37,7 @@ VALUES (@fn, @ln, @em, @hd, @jid, @sal)";
                 sqlCommand.Parameters.AddWithValue("@fn", employee.First_name);
                 sqlCommand.Parameters.AddWithValue("@ln", employee.Last_name);
                 sqlCommand.Parameters.AddWithValue("@sal", employee.Salary);
-                sqlCommand.Parameters.AddWithValue("@jid", employee.Department_id);
+                sqlCommand.Parameters.AddWithValue("@jid", employee.Job_id);
 
                 SqlParameter p1 = new SqlParameter("@hd", employee.Hire_date);
                 sqlCommand.Parameters.Add(p1);
@@ -45,15 +48,15 @@ VALUES (@fn, @ln, @em, @hd, @jid, @sal)";
 
 
                 int num = sqlCommand.ExecuteNonQuery();
-                MessageBox.Show($"{num} filas insertadas!");
 
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Fallo en la 3r inserción!!");
+                MessageBox.Show("Fallo en la inserción!!");
             }
+            Cnx.Close();
         }
     }
 }
-}
+

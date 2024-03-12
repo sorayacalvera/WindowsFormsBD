@@ -46,14 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormBDConexion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBDConexion.Designer.cs">
-      <DependentUpon>FormBDConexion.cs</DependentUpon>
-    </Compile>
     <Compile Include="BIZ\BIZEmployees.cs" />
-    <Compile Include="DAL\DALBDConexion.cs" />
+    <Compile Include="DAL\BDConexion.cs" />
     <Compile Include="DAL\DALCountries.cs" />
     <Compile Include="DAL\DALDepartments.cs" />
     <Compile Include="DAL\DALDependents.cs" />
@@ -61,16 +55,16 @@
     <Compile Include="DAL\DALJobs.cs" />
     <Compile Include="DAL\DALLocations.cs" />
     <Compile Include="DAL\DALRegions.cs" />
-    <Compile Include="FormEmployee.cs">
+    <Compile Include="UI\FormEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEmployee.Designer.cs">
+    <Compile Include="UI\FormEmployee.Designer.cs">
       <DependentUpon>FormEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="UI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MODELO\Countries.cs" />
@@ -82,11 +76,8 @@
     <Compile Include="MODELO\Regions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormBDConexion.resx">
-      <DependentUpon>FormBDConexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,8 +101,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
