@@ -14,6 +14,7 @@ namespace WindowsFormsBD.DAL
     {
         public void Insertar3(Employee employee)
         {
+            SqlConnection Conn = null;
             try
             {
                 SqlCommand sqlCommand = new SqlCommand();
@@ -31,15 +32,15 @@ VALUES (@fn, @ln, @em, @hd, @jid, @sal)";
 
                 //diferentes formas de añadir los parametros
                 sqlCommand.Parameters.AddWithValue("@fn", employee.First_name);
-                sqlCommand.Parameters.AddWithValue("@ln", ln);
-                sqlCommand.Parameters.AddWithValue("@sal", salary);
-                sqlCommand.Parameters.AddWithValue("@jid", jobid);
+                sqlCommand.Parameters.AddWithValue("@ln", employee.Last_name);
+                sqlCommand.Parameters.AddWithValue("@sal", employee.Salary);
+                sqlCommand.Parameters.AddWithValue("@jid", employee.Department_id);
 
-                SqlParameter p1 = new SqlParameter("@hd", hire);
+                SqlParameter p1 = new SqlParameter("@hd", employee.Hire_date);
                 sqlCommand.Parameters.Add(p1);
 
                 SqlParameter p2 = new SqlParameter("@em", SqlDbType.VarChar, 100);
-                p2.Value = email;
+                p2.Value = employee.Email;
                 sqlCommand.Parameters.Add(p2);
 
 
@@ -50,7 +51,7 @@ VALUES (@fn, @ln, @em, @hd, @jid, @sal)";
             catch (Exception ex)
             {
 
-                labMessage.Text = "Fallo en la 3r inserción!!";
+                MessageBox.Show("Fallo en la 3r inserción!!");
             }
         }
     }

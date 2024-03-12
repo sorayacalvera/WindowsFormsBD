@@ -13,6 +13,7 @@ namespace WindowsFormsBD
 {
     public partial class Form1 : Form
     {
+        /*
         SqlConnection Conn = null;
         public Form1()
         {
@@ -104,6 +105,6 @@ VALUES (@fn, @ln, @em, @hd, @jid, @sal)";
 
                 labMessage.Text = "Fallo en la 3r inserción!!";
             }
-        }
+        }*/
     }
 }
