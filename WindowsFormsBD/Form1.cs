@@ -20,40 +20,6 @@ namespace WindowsFormsBD
              Conn = new SqlConnection("Server=85.208.20.69,54321;Database=SorayaEmpleados;User Id=sa;Password=Sql#123456789;");
         }
 
-        private void butOpen_Click(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                if (Conn.State != ConnectionState.Open)
-                    Conn.Open();
-                labMessage.Text = "Conexión OK!";
-                butOpen.Enabled = false;
-                butCerrar.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                labMessage.Text = "Fallo en la conexión!";
-            }
-           
-        }
-
-        private void butCerrar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (Conn.State != ConnectionState.Closed)
-                    Conn.Close();
-                labMessage.Text = ("Conexión cerrada!");
-                butOpen.Enabled = true;
-                butCerrar.Enabled = false;
-            }
-            catch (Exception ex)
-            {
-                labMessage.Text = ("Fallo en la desconexión!");
-            }
-        }
-
         private void butInsert_Click(object sender, EventArgs e)
         {
             Insertar3("Soraya","Calvera","dfkjfkjd", new DateTime(2020,01,2),4,10000);

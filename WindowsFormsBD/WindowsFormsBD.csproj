@@ -46,18 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBDConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBDConexion.Designer.cs">
+      <DependentUpon>FormBDConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BIZ\BIZEmployees.cs" />
+    <Compile Include="DAL\DALBDConexion.cs" />
     <Compile Include="DAL\DALCountries.cs" />
     <Compile Include="DAL\DALDepartments.cs" />
     <Compile Include="DAL\DALDependents.cs" />
-    <Compile Include="DAL\DALEmployees.cs" />
+    <Compile Include="DAL\DALEmployee.cs" />
     <Compile Include="DAL\DALJobs.cs" />
     <Compile Include="DAL\DALLocations.cs" />
     <Compile Include="DAL\DALRegions.cs" />
-    <Compile Include="Employee.cs">
+    <Compile Include="FormEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <Compile Include="FormEmployee.Designer.cs">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -68,7 +76,7 @@
     <Compile Include="MODELO\Countries.cs" />
     <Compile Include="MODELO\Departments.cs" />
     <Compile Include="MODELO\Dependents.cs" />
-    <Compile Include="MODELO\Employees.cs" />
+    <Compile Include="MODELO\Employee.cs" />
     <Compile Include="MODELO\Jobs.cs" />
     <Compile Include="MODELO\Locations.cs" />
     <Compile Include="MODELO\Regions.cs" />
@@ -76,6 +84,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBDConexion.resx">
+      <DependentUpon>FormBDConexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,7 +111,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BIZ\" />
     <Folder Include="UI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

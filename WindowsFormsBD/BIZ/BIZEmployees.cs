@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsBD.DAL
+namespace WindowsFormsBD.BIZ
 {
-    internal class DALEmployees
+    internal class BIZEmployees
     {
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsBD
 {
-    partial class Employee
+    partial class FormEmployee
     {
         /// <summary>
         /// Required designer variable.

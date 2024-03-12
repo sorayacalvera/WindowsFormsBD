@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsBD.MODELO
 {
-    internal class Employees
+    public class Employee
     {
         private int employee_id;
         private string first_name;
@@ -27,7 +27,7 @@ namespace WindowsFormsBD.MODELO
         public int Manager_id { get => manager_id; set => manager_id = value; }
         public int Department_id { get => department_id; set => department_id = value; }
 
-        public Employees(int employee_id, string first_name, string last_name, string email, string phone_number, DateTime hire_date, decimal salary, int manager_id, int departmd_id)
+        public Employee(int employee_id, string first_name, string last_name, string email, string phone_number, DateTime hire_date, decimal salary, int manager_id, int department_id)
         {
             this.employee_id = employee_id;
             this.first_name = first_name;
