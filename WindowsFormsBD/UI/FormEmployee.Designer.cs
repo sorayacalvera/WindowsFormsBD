@@ -30,28 +30,35 @@
         {
             this.labFirst_Name = new System.Windows.Forms.Label();
             this.textBoxFirst_name = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.labLast_name = new System.Windows.Forms.Label();
+            this.labEmail = new System.Windows.Forms.Label();
+            this.labPhone_number = new System.Windows.Forms.Label();
+            this.labHire_date = new System.Windows.Forms.Label();
+            this.labSalary = new System.Windows.Forms.Label();
+            this.labManager_id = new System.Windows.Forms.Label();
+            this.labJob_id = new System.Windows.Forms.Label();
+            this.labDepartment_id = new System.Windows.Forms.Label();
+            this.textBoxLast_name = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxPhone_number = new System.Windows.Forms.TextBox();
+            this.dateTimeHire_date = new System.Windows.Forms.DateTimePicker();
+            this.listBoxEmployee = new System.Windows.Forms.ListBox();
+            this.butGuardar = new System.Windows.Forms.Button();
+            this.numericUpDownSalary = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownManager_id = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDepartment_id = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownJob_id = new System.Windows.Forms.NumericUpDown();
+            this.labMessageBox = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSalary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownManager_id)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepartment_id)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownJob_id)).BeginInit();
             this.SuspendLayout();
             // 
             // labFirst_Name
             // 
             this.labFirst_Name.AutoSize = true;
-            this.labFirst_Name.Location = new System.Drawing.Point(37, 31);
+            this.labFirst_Name.Location = new System.Drawing.Point(33, 31);
             this.labFirst_Name.Name = "labFirst_Name";
             this.labFirst_Name.Size = new System.Drawing.Size(72, 16);
             this.labFirst_Name.TabIndex = 0;
@@ -59,164 +66,201 @@
             // 
             // textBoxFirst_name
             // 
-            this.textBoxFirst_name.Location = new System.Drawing.Point(131, 28);
+            this.textBoxFirst_name.Location = new System.Drawing.Point(152, 31);
             this.textBoxFirst_name.Name = "textBoxFirst_name";
-            this.textBoxFirst_name.Size = new System.Drawing.Size(100, 22);
+            this.textBoxFirst_name.Size = new System.Drawing.Size(244, 22);
             this.textBoxFirst_name.TabIndex = 1;
             // 
-            // label1
+            // labLast_name
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.labLast_name.AutoSize = true;
+            this.labLast_name.Location = new System.Drawing.Point(33, 61);
+            this.labLast_name.Name = "labLast_name";
+            this.labLast_name.Size = new System.Drawing.Size(72, 16);
+            this.labLast_name.TabIndex = 2;
+            this.labLast_name.Text = "Last Name";
             // 
-            // label2
+            // labEmail
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.labEmail.AutoSize = true;
+            this.labEmail.Location = new System.Drawing.Point(33, 91);
+            this.labEmail.Name = "labEmail";
+            this.labEmail.Size = new System.Drawing.Size(41, 16);
+            this.labEmail.TabIndex = 3;
+            this.labEmail.Text = "Email";
             // 
-            // label3
+            // labPhone_number
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
+            this.labPhone_number.AutoSize = true;
+            this.labPhone_number.Location = new System.Drawing.Point(33, 119);
+            this.labPhone_number.Name = "labPhone_number";
+            this.labPhone_number.Size = new System.Drawing.Size(94, 16);
+            this.labPhone_number.TabIndex = 4;
+            this.labPhone_number.Text = "Phone number";
             // 
-            // label4
+            // labHire_date
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 135);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "label4";
+            this.labHire_date.AutoSize = true;
+            this.labHire_date.Location = new System.Drawing.Point(33, 146);
+            this.labHire_date.Name = "labHire_date";
+            this.labHire_date.Size = new System.Drawing.Size(62, 16);
+            this.labHire_date.TabIndex = 5;
+            this.labHire_date.Text = "Hire date";
             // 
-            // label5
+            // labSalary
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 155);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "label5";
+            this.labSalary.AutoSize = true;
+            this.labSalary.Location = new System.Drawing.Point(33, 175);
+            this.labSalary.Name = "labSalary";
+            this.labSalary.Size = new System.Drawing.Size(46, 16);
+            this.labSalary.TabIndex = 6;
+            this.labSalary.Text = "Salary";
             // 
-            // label6
+            // labManager_id
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(40, 175);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 16);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "label6";
+            this.labManager_id.AutoSize = true;
+            this.labManager_id.Location = new System.Drawing.Point(33, 206);
+            this.labManager_id.Name = "labManager_id";
+            this.labManager_id.Size = new System.Drawing.Size(77, 16);
+            this.labManager_id.TabIndex = 7;
+            this.labManager_id.Text = "Manager ID";
             // 
-            // label7
+            // labJob_id
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(43, 195);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 16);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "label7";
+            this.labJob_id.AutoSize = true;
+            this.labJob_id.Location = new System.Drawing.Point(33, 262);
+            this.labJob_id.Name = "labJob_id";
+            this.labJob_id.Size = new System.Drawing.Size(46, 16);
+            this.labJob_id.TabIndex = 8;
+            this.labJob_id.Text = "Job ID";
             // 
-            // label8
+            // labDepartment_id
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(40, 215);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 16);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "label8";
+            this.labDepartment_id.AutoSize = true;
+            this.labDepartment_id.Location = new System.Drawing.Point(33, 234);
+            this.labDepartment_id.Name = "labDepartment_id";
+            this.labDepartment_id.Size = new System.Drawing.Size(93, 16);
+            this.labDepartment_id.TabIndex = 9;
+            this.labDepartment_id.Text = "Department ID";
             // 
-            // textBox1
+            // textBoxLast_name
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 10;
+            this.textBoxLast_name.Location = new System.Drawing.Point(151, 58);
+            this.textBoxLast_name.Name = "textBoxLast_name";
+            this.textBoxLast_name.Size = new System.Drawing.Size(245, 22);
+            this.textBoxLast_name.TabIndex = 10;
             // 
-            // textBox2
+            // textBoxEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(131, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 11;
+            this.textBoxEmail.Location = new System.Drawing.Point(152, 88);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(244, 22);
+            this.textBoxEmail.TabIndex = 11;
             // 
-            // textBox3
+            // textBoxPhone_number
             // 
-            this.textBox3.Location = new System.Drawing.Point(112, 116);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 12;
+            this.textBoxPhone_number.Location = new System.Drawing.Point(151, 116);
+            this.textBoxPhone_number.Name = "textBoxPhone_number";
+            this.textBoxPhone_number.Size = new System.Drawing.Size(245, 22);
+            this.textBoxPhone_number.TabIndex = 12;
             // 
-            // textBox4
+            // dateTimeHire_date
             // 
-            this.textBox4.Location = new System.Drawing.Point(112, 135);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 13;
+            this.dateTimeHire_date.Location = new System.Drawing.Point(152, 146);
+            this.dateTimeHire_date.Name = "dateTimeHire_date";
+            this.dateTimeHire_date.Size = new System.Drawing.Size(244, 22);
+            this.dateTimeHire_date.TabIndex = 18;
             // 
-            // textBox5
+            // listBoxEmployee
             // 
-            this.textBox5.Location = new System.Drawing.Point(112, 155);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 14;
+            this.listBoxEmployee.FormattingEnabled = true;
+            this.listBoxEmployee.ItemHeight = 16;
+            this.listBoxEmployee.Location = new System.Drawing.Point(459, 31);
+            this.listBoxEmployee.Name = "listBoxEmployee";
+            this.listBoxEmployee.Size = new System.Drawing.Size(301, 388);
+            this.listBoxEmployee.TabIndex = 19;
+            this.listBoxEmployee.SelectedIndexChanged += new System.EventHandler(this.listBoxEmployee_SelectedIndexChanged);
             // 
-            // textBox6
+            // butGuardar
             // 
-            this.textBox6.Location = new System.Drawing.Point(112, 175);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 15;
+            this.butGuardar.Location = new System.Drawing.Point(346, 305);
+            this.butGuardar.Name = "butGuardar";
+            this.butGuardar.Size = new System.Drawing.Size(75, 23);
+            this.butGuardar.TabIndex = 20;
+            this.butGuardar.Text = "Guardar";
+            this.butGuardar.UseVisualStyleBackColor = true;
+            this.butGuardar.Click += new System.EventHandler(this.butGuardar_Click);
             // 
-            // textBox7
+            // numericUpDownSalary
             // 
-            this.textBox7.Location = new System.Drawing.Point(112, 195);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 16;
+            this.numericUpDownSalary.Location = new System.Drawing.Point(152, 175);
+            this.numericUpDownSalary.Name = "numericUpDownSalary";
+            this.numericUpDownSalary.Size = new System.Drawing.Size(245, 22);
+            this.numericUpDownSalary.TabIndex = 21;
             // 
-            // textBox8
+            // numericUpDownManager_id
             // 
-            this.textBox8.Location = new System.Drawing.Point(112, 215);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 17;
+            this.numericUpDownManager_id.Location = new System.Drawing.Point(152, 206);
+            this.numericUpDownManager_id.Name = "numericUpDownManager_id";
+            this.numericUpDownManager_id.Size = new System.Drawing.Size(245, 22);
+            this.numericUpDownManager_id.TabIndex = 22;
+            // 
+            // numericUpDownDepartment_id
+            // 
+            this.numericUpDownDepartment_id.Location = new System.Drawing.Point(152, 235);
+            this.numericUpDownDepartment_id.Name = "numericUpDownDepartment_id";
+            this.numericUpDownDepartment_id.Size = new System.Drawing.Size(244, 22);
+            this.numericUpDownDepartment_id.TabIndex = 23;
+            // 
+            // numericUpDownJob_id
+            // 
+            this.numericUpDownJob_id.Location = new System.Drawing.Point(152, 264);
+            this.numericUpDownJob_id.Name = "numericUpDownJob_id";
+            this.numericUpDownJob_id.Size = new System.Drawing.Size(245, 22);
+            this.numericUpDownJob_id.TabIndex = 24;
+            // 
+            // labMessageBox
+            // 
+            this.labMessageBox.AutoSize = true;
+            this.labMessageBox.Location = new System.Drawing.Point(124, 438);
+            this.labMessageBox.Name = "labMessageBox";
+            this.labMessageBox.Size = new System.Drawing.Size(44, 16);
+            this.labMessageBox.TabIndex = 25;
+            this.labMessageBox.Text = "label1";
             // 
             // FormEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(800, 532);
+            this.Controls.Add(this.labMessageBox);
+            this.Controls.Add(this.numericUpDownJob_id);
+            this.Controls.Add(this.numericUpDownDepartment_id);
+            this.Controls.Add(this.numericUpDownManager_id);
+            this.Controls.Add(this.numericUpDownSalary);
+            this.Controls.Add(this.butGuardar);
+            this.Controls.Add(this.listBoxEmployee);
+            this.Controls.Add(this.dateTimeHire_date);
+            this.Controls.Add(this.textBoxPhone_number);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxLast_name);
+            this.Controls.Add(this.labDepartment_id);
+            this.Controls.Add(this.labJob_id);
+            this.Controls.Add(this.labManager_id);
+            this.Controls.Add(this.labSalary);
+            this.Controls.Add(this.labHire_date);
+            this.Controls.Add(this.labPhone_number);
+            this.Controls.Add(this.labEmail);
+            this.Controls.Add(this.labLast_name);
             this.Controls.Add(this.textBoxFirst_name);
             this.Controls.Add(this.labFirst_Name);
             this.Name = "FormEmployee";
             this.Text = "Employee";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSalary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownManager_id)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepartment_id)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownJob_id)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,21 +270,24 @@
 
         private System.Windows.Forms.Label labFirst_Name;
         private System.Windows.Forms.TextBox textBoxFirst_name;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label labLast_name;
+        private System.Windows.Forms.Label labEmail;
+        private System.Windows.Forms.Label labPhone_number;
+        private System.Windows.Forms.Label labHire_date;
+        private System.Windows.Forms.Label labSalary;
+        private System.Windows.Forms.Label labManager_id;
+        private System.Windows.Forms.Label labJob_id;
+        private System.Windows.Forms.Label labDepartment_id;
+        private System.Windows.Forms.TextBox textBoxLast_name;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxPhone_number;
+        private System.Windows.Forms.ListBox listBoxEmployee;
+        private System.Windows.Forms.Button butGuardar;
+        private System.Windows.Forms.DateTimePicker dateTimeHire_date;
+        private System.Windows.Forms.NumericUpDown numericUpDownSalary;
+        private System.Windows.Forms.NumericUpDown numericUpDownManager_id;
+        private System.Windows.Forms.NumericUpDown numericUpDownDepartment_id;
+        private System.Windows.Forms.NumericUpDown numericUpDownJob_id;
+        private System.Windows.Forms.Label labMessageBox;
     }
 }

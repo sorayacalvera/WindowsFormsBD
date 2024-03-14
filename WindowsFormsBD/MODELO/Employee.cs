@@ -40,7 +40,7 @@ namespace WindowsFormsBD.MODELO
             this.salary = salary;
             this.manager_id = manager_id;
             this.department_id = department_id;
-            this.Job_id = job_id;
+            this.job_id = job_id;
         }
     }
 }
