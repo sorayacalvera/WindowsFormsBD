@@ -57,6 +57,36 @@ VALUES (@fn, @ln, @em, @hd, @jid, @sal)";
             }
             Cnx.Close();
         }
+
+        public List<Employee> Select() 
+        { 
+            List<Employee> listEmployee = new List<Employee>();
+            string sql = " SELECT * FROM employees";
+            SqlCommand sqlCommand = new SqlCommand(sql, Cnx.Conn);
+            Cnx.Conn.Open();
+            
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Employee miemployee = new Employee();
+                miemployee.Employee_id = (int)reader["employee_id"];
+                miemployee.First_name = reader.GetString(1);
+                miemployee.Last_name = reader.GetString(2);
+                miemployee.Email = reader.GetString(3);
+                miemployee.Phone_number = reader.IsDBNull(4) ? (string)null : (string)reader.GetString(4);
+                miemployee.Hire_date = reader.GetDateTime(5);
+                miemployee.Job_id = (int)reader["job_id"];
+                miemployee.Salary = (decimal)reader["salary"];
+                miemployee.Manager_id = reader.IsDBNull(8) ? (int?)null : (int?)reader[8];
+                miemployee.Department_id = reader.IsDBNull(9) ? (int?)null : (int?)reader[9];
+
+                listEmployee.Add(miemployee);
+            }
+            Cnx.Conn.Close();
+            return listEmployee;
+
+        }
     }
 }
 

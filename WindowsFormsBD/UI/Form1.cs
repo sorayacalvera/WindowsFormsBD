@@ -20,6 +20,8 @@ namespace WindowsFormsBD
         public Form1()
         {
             InitializeComponent();
+            FormEmployee formEmployee = new FormEmployee();
+            formEmployee.ShowDialog();
         }
 
         private void butInsert_Click(object sender, EventArgs e)

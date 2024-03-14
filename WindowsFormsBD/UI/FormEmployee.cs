@@ -23,14 +23,22 @@ namespace WindowsFormsBD
         {
 
         }
-
         private void butGuardar_Click(object sender, EventArgs e)
         {
-            Employee emp = new Employee(0, textBoxFirst_name.Text, textBoxLast_name.Text, textBoxEmail.Text, textBoxPhone_number.Text, Convert.ToDateTime(dateTimeHire_date.Value.Date), numericUpDownManager_id.Value, Convert.ToInt16(numericUpDownSalary.Value), Convert.ToInt16(numericUpDownDepartment_id.Value), Convert.ToInt16(numericUpDownJob_id.Value));
+            Employee emp = new Employee(0, textBoxFirst_name.Text, textBoxLast_name.Text, textBoxEmail.Text, textBoxPhone_number.Text, Convert.ToDateTime(dateTimeHire_date.Value.Date), numericUpDownSalary.Value, (int)numericUpDownManager_id.Value, (int)numericUpDownDepartment_id.Value,(int)numericUpDownJob_id.Value);
 
             DALEmployee dal = new DALEmployee();
             
             dal.Insertar(emp);
+        }
+
+        private void butSelect_Click(object sender, EventArgs e)
+        {
+            DALEmployee daleEmployee = new DALEmployee();
+            listBoxEmployee.Items.Clear();
+            foreach (Employee emp in daleEmployee.Select())
+                listBoxEmployee.Items.Add(emp);
+
         }
     }
 }

@@ -48,7 +48,7 @@
             this.numericUpDownManager_id = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownDepartment_id = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownJob_id = new System.Windows.Forms.NumericUpDown();
-            this.labMessageBox = new System.Windows.Forms.Label();
+            this.butSelect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSalary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownManager_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepartment_id)).BeginInit();
@@ -175,7 +175,7 @@
             // 
             this.listBoxEmployee.FormattingEnabled = true;
             this.listBoxEmployee.ItemHeight = 16;
-            this.listBoxEmployee.Location = new System.Drawing.Point(459, 31);
+            this.listBoxEmployee.Location = new System.Drawing.Point(442, 41);
             this.listBoxEmployee.Name = "listBoxEmployee";
             this.listBoxEmployee.Size = new System.Drawing.Size(301, 388);
             this.listBoxEmployee.TabIndex = 19;
@@ -219,14 +219,15 @@
             this.numericUpDownJob_id.Size = new System.Drawing.Size(245, 22);
             this.numericUpDownJob_id.TabIndex = 24;
             // 
-            // labMessageBox
+            // butSelect
             // 
-            this.labMessageBox.AutoSize = true;
-            this.labMessageBox.Location = new System.Drawing.Point(124, 438);
-            this.labMessageBox.Name = "labMessageBox";
-            this.labMessageBox.Size = new System.Drawing.Size(44, 16);
-            this.labMessageBox.TabIndex = 25;
-            this.labMessageBox.Text = "label1";
+            this.butSelect.Location = new System.Drawing.Point(625, 12);
+            this.butSelect.Name = "butSelect";
+            this.butSelect.Size = new System.Drawing.Size(75, 23);
+            this.butSelect.TabIndex = 25;
+            this.butSelect.Text = "Select";
+            this.butSelect.UseVisualStyleBackColor = true;
+            this.butSelect.Click += new System.EventHandler(this.butSelect_Click);
             // 
             // FormEmployee
             // 
@@ -234,7 +235,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 532);
-            this.Controls.Add(this.labMessageBox);
+            this.Controls.Add(this.butSelect);
             this.Controls.Add(this.numericUpDownJob_id);
             this.Controls.Add(this.numericUpDownDepartment_id);
             this.Controls.Add(this.numericUpDownManager_id);
@@ -288,6 +289,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDownManager_id;
         private System.Windows.Forms.NumericUpDown numericUpDownDepartment_id;
         private System.Windows.Forms.NumericUpDown numericUpDownJob_id;
-        private System.Windows.Forms.Label labMessageBox;
+        private System.Windows.Forms.Button butSelect;
     }
 }

@@ -15,8 +15,8 @@ namespace WindowsFormsBD.MODELO
         private string phone_number;
         private DateTime hire_date;
         private decimal salary;
-        private int manager_id;
-        private int department_id;
+        private int? manager_id;
+        private int? department_id;
         private int job_id;
         public int Employee_id { get => employee_id; set => employee_id = value; }
         public string First_name { get => first_name; set => first_name = value; }
@@ -25,8 +25,8 @@ namespace WindowsFormsBD.MODELO
         public string Phone_number { get => phone_number; set => phone_number = value; }
         public DateTime Hire_date { get => hire_date; set => hire_date = value; }
         public decimal Salary { get => salary; set => salary = value; }
-        public int Manager_id { get => manager_id; set => manager_id = value; }
-        public int Department_id { get => department_id; set => department_id = value; }
+        public int? Manager_id { get => manager_id; set => manager_id = value; }
+        public int? Department_id { get => department_id; set => department_id = value; }
         public int Job_id { get => job_id; set => job_id = value; }
 
         public Employee(int employee_id, string first_name, string last_name, string email, string phone_number, DateTime hire_date, decimal salary, int manager_id, int department_id, int job_id)
@@ -41,6 +41,13 @@ namespace WindowsFormsBD.MODELO
             this.manager_id = manager_id;
             this.department_id = department_id;
             this.job_id = job_id;
+        }
+        
+        public Employee() { }
+
+        public override string ToString()
+        {
+            return (this.First_name);
         }
     }
 }
